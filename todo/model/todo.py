@@ -11,3 +11,13 @@ class Todo:
         self.completed: bool = False
         self.tags: List[str] = []
 
+    def mark_completed(self) -> None:     
+        self.completed = True
+
+    def add_tag(self, tag: str) -> None:
+        if tag not in self.tags:
+            self.tags.append(tag)
+
+    def __str__(self) -> str:
+        return f"{self.code_id} - {self.title}"
+
